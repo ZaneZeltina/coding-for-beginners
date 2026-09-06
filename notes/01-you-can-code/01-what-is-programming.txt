@@ -1,0 +1,59 @@
+====================================================================================================
+01. KAS IR PROGRAMMĒŠANA UN ALGORITMI?
+====================================================================================================
+
+1. KAS IR PROGRAMMĒŠANA?
+----------------------------------------------------------------------------------------------------
+Datori, viedtālruņi un citas viedierīces nesaprot parastu cilvēku valodu. Lai liktu ierīcei veikt konkrētas darbības, mēs tai dodam precīzas komandas īpašā, tai saprotamā formā — programmēšanas valodā (programming language).
+
+* Programmēšana (programming / coding) ir datoram paredzētu, soli pa solim izpildāmu instrukciju (instructions) veidošanas process.
+* Programma (program / software) ir šādu instrukciju kopums, kas risina konkrētu uzdevumu (piemēram, sociālais tīkls, mobilā spēle vai navigācijas lietotne).
+
+
+2. KAS IR ALGORITMS?
+----------------------------------------------------------------------------------------------------
+* Algoritms (algorithm) ir skaidrs, secīgs soļu plāns konkrēta uzdevuma vai problēmas atrisināšanai.
+* Dators šos soļus izpilda stingrā secībā — no pirmā līdz pēdējam.
+
+[DZĪVES ANALOĢIJA: Kulinārijas recepte]
+Iztēlojies vienkāršu olu kulteņa pagatavošanas recepti:
+1. Paņem 2 olas.
+2. Iesit tās bļodā un sakul.
+3. Ielej sakulto masu uzkarsētā pannā.
+4. Cep 3 minūtes.
+
+Šis ir tipisks algoritms! Ja soļus samainītu vietām (piemēram, vispirms uzliktu veselas olas uz pannas un tikai tad mēģinātu tās kult), rezultāts neizdotos. Programmēšanā secība un precizitāte ir tikpat svarīga.
+
+
+3. ALGORITMU PIEMĒRI IKDIENĀ
+----------------------------------------------------------------------------------------------------
+* Meklētājs (piem., Google): Izmanto sarežģītus meklēšanas algoritmus, lai sekundes simtdaļās atrastu piemērotākās tīmekļa vietnes.
+* Sociālo tīklu plūsmas: Algoritmi atlasa un parāda saturu, kas konkrētajam lietotājam varētu būt visinteresantākais.
+* Lietotņu pamatfunkcijas: Ikviena programma sastāv no daudziem maziem algoritmiem (piemēram, paroles pārbaude, ziņojumu nosūtīšana, failu saglabāšana).
+
+
+4. PRAKTISKS PIEMĒRS: KĀ TAS IZSKATĀS PRAKSĒ?
+----------------------------------------------------------------------------------------------------
+A) Pseidokods (Pseudocode) - neformāls loģikas apraksts:
+   1. solis: Lietotājs ievada paroli.
+   2. solis: JA ievadītā parole ir pareiza:
+                -> Atvērt piekļuvi kontam.
+   3. solis: CITĀDI (ja parole nav pareiza):
+                -> Parādīt kļūdas paziņojumu "Nepareiza parole".
+
+B) Piemērs Python valodā (Python code):
+   pareiza_parole = "slepena123"
+   ievadita_parole = "slepena123"
+
+   if ievadita_parole == pareiza_parole:
+       print("Piekļuve piešķirta! Laipni lūgti sistēmā.")
+   else:
+       print("Kļūda: Nepareiza parole. Mēģiniet vēlreiz.")
+
+
+5. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Programmēšana ir instrukciju un komandu rakstīšana datoram.
+2. Algoritms ir precīza, loģiska soļu secība mērķa sasniegšanai.
+3. Dators dara tieši to, kas tam pateikts — tas pats neizdomā trūkstošos soļus, tāpēc instrukcijām jābūt precīzām.
+====================================================================================================
