@@ -4,13 +4,15 @@
 
 1. KAS IR PYTHON?
 ----------------------------------------------------------------------------------------------------
-Python (Paitons) ir viena no populārākajām, modernākajām un iesācējiem draudzīgākajām programmēšanas valodām (programming
+Python (Paitons) ir viena no populārākajām, modernākajām un iesācējiem draudzīgākajām programmēšanas valodām
+(programming
 language) pasaulē. Tās galvenā priekšrocība ir koda lasāmība — Python kods izskatās un lasās gandrīz kā parasta angļu
 valoda.
 
 Kā sākt darbu ar Python:
 * Python tiek lejupielādēts no oficiālās vietnes (python.org).
-* To var palaist caur termināli / komandrindu (ar komandu `python` vai `python3`), kā arī caur speciālām izstrādes vidēm un programmām (IDE - WebStorm, PyCharm, VS Code, IDLE vai Jupyter Notebook).
+* To var palaist caur termināli / komandrindu (ar komandu `python` vai `python3`), kā arī caur speciālām izstrādes
+vidēm un programmām (IDE - WebStorm, PyCharm, VS Code, IDLE vai Jupyter Notebook).
 
 
 2. KAS IR SINTAKSE?
@@ -32,7 +34,8 @@ precīzi pēc noteikumiem. Ja sintaksē pieļauj kļūdu (SyntaxError), dators k
 * Piešķiršana (=) pret Salīdzināšanu (==):
   - Viens vienādības simbols `=` ir PIEŠĶIRŠANAS operators (assignment operator). Tas saglabā vērtību mainīgajā.
     Piemērs: `vecums = 25` (mainīgajā "vecums" tiek ievietots skaitlis 25).
-  - Divi vienādības simboli `==` ir SALĪDZINĀŠANAS / VIENĀDĪBAS operators (equality operator). Tas pārbauda, vai abas puses ir vienādas.
+  - Divi vienādības simboli `==` ir SALĪDZINĀŠANAS / VIENĀDĪBAS operators (equality operator). Tas pārbauda, vai abas
+  puses ir vienādas.
     Piemērs: `vecums == 25` (jautājums datoram: "Vai vecums patiešām ir vienāds ar 25?").
 
 * Nosacījumu konstrukcijas (Conditional statements / Decision making):

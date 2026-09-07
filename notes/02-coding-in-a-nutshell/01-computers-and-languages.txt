@@ -1,0 +1,96 @@
+====================================================================================================
+03. KĀ STRĀDĀ DATORI UN PROGRAMMĒŠANAS VALODAS
+====================================================================================================
+
+1. KĀ DATORI SAPROT INFORMĀCIJU? (BINĀRĀ SISTĒMA)
+----------------------------------------------------------------------------------------------------
+Jebkura datora, viedtālruņa vai viedierīces iekšienē atrodas miljardiem mikroskopisku slēdžu — tranzistoru
+(transistors). Tie var atrasties tikai divos stāvokļos:
+* Ieslēgts (elektriskā strāva plūst) = 1
+* Izslēgts (elektriskās strāvas nav) = 0
+
+Binārais kods (binary code) ir nullīšu un vieninieku valoda jeb mašīnkods (machine code), ko datora procesors (CPU)
+saprot tiešā veidā kā elektriskos signālus.
+
+
+2. KĀPĒC NEPIECIEŠAMAS PROGRAMMĒŠANAS VALODAS?
+----------------------------------------------------------------------------------------------------
+Cilvēkam rakstīt programmas tikai no vieniniekiem un nullītēm (piemēram: 01001000 01101001) būtu neticami sarežģīti un
+lēni. Tāpēc tika radītas programmēšanas valodas:
+
+* Zema līmeņa valodas (Low-level languages): Atrodas ļoti tuvu datora "dzelžiem" un aparatūrai (piem., Asamblers, C).
+Tās ir grūtāk apgūt un rakstīt, taču tās nodrošina maksimālu darbības ātrumu un tiešu kontroli pār aparatūru un atmiņu.
+* Augsta līmeņa valodas (High-level languages): Ir ļoti līdzīgas parastai angļu valodai (piem., Python, JavaScript).
+Tās ir daudz vieglāk lasīt, saprast, rakstīt un uzturēt.
+
+
+3. KĀ KODS PĀRTOP MAŠĪNKODĀ? (TULKOTĀJI)
+----------------------------------------------------------------------------------------------------
+Lai dators saprastu cilvēka rakstīto augsta līmeņa kodu, tiek izmantotas speciālas "tulku" programmas:
+
+* Kompilators (Compiler): Pārtulko visu programmas kodu mašīnkodā (nullēs un vieniniekos) uzreiz vienā piegājienā pirms
+programmas palaišanas (kā visas grāmatas pārtulkošana pirms tās izdošanas). Piemēri: C, C++, Rust, Go.
+* Interpretators (Interpreter): Lasa, pārtulko un izpilda kodu rindiņu pa rindiņai reāllaikā programmas darbības laikā
+(kā sinhronais tulks). Piemēri: Python, JavaScript, Ruby.
+
+
+4. POPULĀRĀS VALODAS UN IZSTRĀDES VIRZIENI
+----------------------------------------------------------------------------------------------------
+Populārāko tehnoloģiju pielietojums:
+* HTML / CSS: HTML veido tīmekļa vietnes struktūru (saturu, virsrakstus, pogas), bet CSS atbild par vizuālo izskatu un
+dizainu (krāsām, fontiem, izkārtojumu).
+* JavaScript: Padara mājaslapas "dzīvas" un interaktīvas (animācijas, pogu klikšķi, dinamiskas formas). Izmantojot
+Node.js, tas darbojas arī servera pusē.
+* Python: Universāla valoda — izmanto serveru izstrādē, datu analīzē, mākslīgajā intelektā (AI / Machine Learning) un
+ikdienas uzdevumu automatizācijā.
+* C#: Plaši izmanto datorspēļu izstrādē (ar Unity dzinēju) un liela mēroga uzņēmumu programmatūrā.
+
+Izstrādes virzienu sadalījums:
+* Priekšgals (Frontend): Vietnes vai lietotnes ārējā daļa (lietotāja saskarne - UI), ko lietotājs redz savā ekrānā un
+ar ko tieši mijiedarbojas (HTML, CSS, JavaScript).
+* Aizmugure (Backend): Servera loģika, datubāzes un datu apstrāde "zem motora pārsega", ko parastais lietotājs tiešā
+veidā neredz (Python, Node.js, PHP, SQL).
+* Pilna cikla izstrāde (Full-stack): Pieeja un prasmes, kad programmētājs spēj izveidot gan frontend (lietotāja pusi),
+gan backend (servera pusi).
+
+Populāri tehnoloģiju kopumi (Tech Stacks):
+* LAMP steks: Linux (operētājsistēma) + Apache (tīmekļa serveris) + MySQL (datubāze) + PHP/Python (lietotnes loģika).
+* MEAN steks: MongoDB (datubāze) + Express (servera ietvars) + Angular (lietotāja saskarne) + Node.js (izpildes vide).
+
+
+5. KODĒŠANA VAI PROGRAMMĒŠANA? (CODING VS. PROGRAMMING)
+----------------------------------------------------------------------------------------------------
+* Kodēšana (Coding): Pati instrukciju un komandu pierakstīšana konkrētā programmēšanas vai iezīmēšanas valodā.
+* Programmēšana (Programming / Software Engineering): Plašāks process — visas sistēmas arhitektūras projektēšana, algoritmu izstrāde, loģikas plānošana, problēmu risināšana un koda testēšana.
+
+
+6. DZĪVES ANALOĢIJA: Restorāns
+----------------------------------------------------------------------------------------------------
+Iztēlojies pusdienošanu restorānā:
+* Frontend (Lietotāja puse): Gaumīga ēdamzāle, ērta ēdienkarte, skaisti galdi un laipni viesmīļi.
+* Backend (Servera puse): Slēgtā virtuve, kur pavāri gatavo ēdienus pēc receptēm (algoritmiem), un pārtikas noliktava
+(datubāze).
+* Kompilators: Virtuve, kur visas maltītes ir pilnībā sagatavotas un iepakotas jau pirms restorāna atvēršanas.
+* Interpretators: Pavārs, kurš katru porciju gatavo svaigu soli pa solim tieši tajā brīdī, kad klients to pasūta.
+
+
+7. PRAKTISKS STRUKTŪRAS PIEMĒRS (KLIENTS UN SERVERIS)
+----------------------------------------------------------------------------------------------------
+A) Frontend (klients nosūta ievadītos datus):
+   lietotaja_epasts = "anna@piemers.lv"
+   ievadita_parole = "slepena123"
+
+B) Backend (serveris pārbauda datus datubāzē):
+   if lietotaja_epasts == "anna@piemers.lv" and ievadita_parole == "slepena123":
+       print("Autorizācija veiksmīga! Atvērt lietotāja profilu.")
+   else:
+       print("Kļūda: Nepareizs e-pasts vai parole.")
+
+
+8. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Dators aparatūras līmenī saprot tikai elektriskos signālus — nulles un vieniniekus (bināro kodu).
+2. Augsta līmeņa valodas (kā Python un JS) radītas cilvēkiem, lai programmēt būtu ērti un saprotami.
+3. Kompilatori un interpretatori kalpo kā tulki starp cilvēka kodu un procesora mašīnkodu.
+4. Frontend ir tas, ko lietotājs redz un ar ko mijiedarbojas, bet Backend ir neredzamā servera loģika un datubāzes.
+====================================================================================================
