@@ -1,0 +1,71 @@
+====================================================================================================
+02. IEVADS PYTHON UN SINTAKSES PAMATOS
+====================================================================================================
+
+1. KAS IR PYTHON?
+----------------------------------------------------------------------------------------------------
+Python (Paitons) ir viena no populārākajām, modernākajām un iesācējiem draudzīgākajām programmēšanas valodām (programming
+language) pasaulē. Tās galvenā priekšrocība ir koda lasāmība — Python kods izskatās un lasās gandrīz kā parasta angļu
+valoda.
+
+Kā sākt darbu ar Python:
+* Python tiek lejupielādēts no oficiālās vietnes (python.org).
+* To var palaist caur termināli / komandrindu (ar komandu `python` vai `python3`), kā arī caur speciālām izstrādes vidēm un programmām (IDE - WebStorm, PyCharm, VS Code, IDLE vai Jupyter Notebook).
+
+
+2. KAS IR SINTAKSE?
+----------------------------------------------------------------------------------------------------
+Sintakse (syntax) ir programmēšanas valodas "gramatikas un pareizrakstības likumu" kopums.
+Tāpat kā parastā cilvēku valodā mēs ievērojam pareizrakstību un pieturzīmes, arī programmēšanā katra komanda jāuzraksta
+precīzi pēc noteikumiem. Ja sintaksē pieļauj kļūdu (SyntaxError), dators kodu nesapratīs un programma nedarbosies.
+
+
+3. PYTHON SINTAKSES PAMATKONCEPTI
+----------------------------------------------------------------------------------------------------
+* Teksta dati (Strings):
+  Jebkurš teksts Python valodā tiek rakstīts pēdiņās — vienpēdiņās ('teksts') vai dubultpēdiņās ("teksts").
+
+* Datu izvade un ievade (Input / Output):
+  - Izvade `print()`: parāda tekstu, mainīgā saturu vai aprēķina rezultātu uz ekrāna.
+  - Ievade `input()`: aptur programmas darbību, pieprasa datus no lietotāja un gaida, kamēr lietotājs ievadīs tekstu no tastatūras un nospiedīs Enter.
+
+* Piešķiršana (=) pret Salīdzināšanu (==):
+  - Viens vienādības simbols `=` ir PIEŠĶIRŠANAS operators (assignment operator). Tas saglabā vērtību mainīgajā.
+    Piemērs: `vecums = 25` (mainīgajā "vecums" tiek ievietots skaitlis 25).
+  - Divi vienādības simboli `==` ir SALĪDZINĀŠANAS / VIENĀDĪBAS operators (equality operator). Tas pārbauda, vai abas puses ir vienādas.
+    Piemērs: `vecums == 25` (jautājums datoram: "Vai vecums patiešām ir vienāds ar 25?").
+
+* Nosacījumu konstrukcijas (Conditional statements / Decision making):
+  Ļauj programmai pieņemt lēmumus un izvēlēties darbības ceļu (`if` / `else`). Ja nosacījums ir patiess (True), izpildās
+  viens koda bloks; ja nepatiess (False) — izpildās cits.
+
+
+4. DZĪVES ANALOĢIJA: Piekļuves turnikets / e-talons
+----------------------------------------------------------------------------------------------------
+Iztēlojies sabiedriskā transporta e-talona nolasītāju vai biroja durvju turniketu:
+1. Izvade uz ekrāna (`print`): "Lūdzu, pielieciet karti".
+2. Lietotāja darbība / ievade (`input`): Lietotājs pieliek karti pie lasītāja.
+3. Lēmuma pieņemšana ar nosacījumu:
+   - JA (kartes_statuss == "derīga") -> Zaļā gaisma un turnikets atveras.
+   - CITĀDI (else) -> Sarkanā gaisma, skaņas signāls un piekļuve liegta.
+
+
+5. PRAKTISKS KODA PIEMĒRS PYTHON VALODĀ
+----------------------------------------------------------------------------------------------------
+# 1. Pieprasām lietotāja vārdu (datu ievade)
+vards = input("Kā tevi sauc? ")
+
+# 2. Pārbaudām nosacījumu, izmantojot salīdzināšanas operatoru ==
+if vards == "Anna":
+    print("Sveika, Anna! Prieks tevi redzēt!")
+else:
+    print("Sveicināts, viesi! Laipni lūgts programmā.")
+
+
+6. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Sintakse (syntax) ir stingri koda rakstības noteikumi, bez kuriem dators kodu nesaprot.
+2. `print()` izvada datus uz ekrāna, bet `input()` pieprasa datus no lietotāja.
+3. `=` PIEŠĶIR vērtību mainīgajam, bet `==` PĀRBAUDA, vai divas vērtības ir vienādas.
+4. `if` un `else` nosacījumi ļauj programmai pieņemt lēmumus un zarot darbību.
+====================================================================================================
