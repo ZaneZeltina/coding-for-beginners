@@ -1,0 +1,67 @@
+====================================================================================================
+04. IEVADS SCRATCH UN VIZUĀLAJĀ PROGRAMMĒŠANĀ
+====================================================================================================
+
+1. KAS IR SCRATCH?
+----------------------------------------------------------------------------------------------------
+Scratch (Skrečs) ir īpaša vizuālās programmēšanas mācību vide, ko izstrādājis leģendārais Masačūsetsas Tehnoloģiju
+institūts (MIT - Massachusetts Institute of Technology).
+
+Tā ir radīta, lai gan pieaugušie, gan bērni bez jebkādas iepriekšējas pieredzes varētu viegli un intuitīvi izprast
+programmu loģiku un algoritmus, nemācoties sarežģītu kodu vai komandu sintaksi angļu valodā. Scratch vidē var ērti
+veidot savas spēles, animācijas, interaktīvus stāstus un mini lietotnes.
+
+Kā sākt darbu:
+Pietiek atvērt oficiālo vietni (scratch.mit.edu) un veikt bezmaksas reģistrāciju tieši interneta pārlūkprogrammā.
+
+
+2. KĀ STRĀDĀ VIZUĀLIE BLOKI? (VISUAL BLOCKS)
+----------------------------------------------------------------------------------------------------
+Tā vietā, lai kodu rakstītu ar tastatūru rindiņu pa rindiņai, Scratch programmā izmanto gatavu krāsainu bloku mozaīku:
+
+* Notikumu bloki (Events blocks): "Kad nospiests zaļais karodziņš", "Kad nospiests taustiņš Atstarpe (Space)".
+* Kustības bloki (Motion blocks): "Paiet 10 soļus uz priekšu", "Pagriezties par 90 grādiem".
+* Izskata un skaņas bloki (Looks & Sound blocks): "Pateikt 'Sveiks!' uz 2 sekundēm", "Atskaņot skaņu 'Ņau'".
+* Vadības un ciklu bloki (Control & Loops blocks): "Atkārtot 10 reizes", "JA ... TAD ... CITĀDI".
+
+Lietotājs vienkārši ar peli pārvelk šos blokus (Drag and Drop) un savieno tos vienotā loģiskā ķēdē jeb skriptā (script).
+
+
+3. DZĪVES ANALOĢIJA: LEGO konstruktors
+----------------------------------------------------------------------------------------------------
+Iztēlojies LEGO klucīšu komplektu:
+Tev ir dažādas formas, izmēra un krāsas detaļas. Katrai detaļai ir savs uzdevums (ritenis, bloks, logs, jumts). Kad tās
+pareizi savieno kopā — rodas mašīna, māja vai vesela pilsēta.
+
+Scratch ir tieši tāds pats LEGO konstruktors, tikai paredzēts datorprogrammu, animāciju un spēļu veidošanai!
+
+
+4. KĀPĒC SCRATCH IR LIELISKS SĀKUMPUNKTS?
+----------------------------------------------------------------------------------------------------
+* Nav sintakses kļūdu (No Syntax Errors): Nav jāuztraucas par aizmirstām iekavām, semikoliem, punktiem vai
+pārrakstīšanās kļūdām. Ja komanda nav loģiski pareiza, bloki fiziski nesavienosies kopā.
+* Uzsvars uz loģiku un algoritmiem: Tu uzreiz iemācies domāt kā programmētājs — būvēt secīgus soļus, ciklus (loops) un
+nosacījumus (conditions).
+* Tūlītējs vizuāls rezultāts: Tu redzi sava izveidotā tēla (spraits / sprite) kustību un darbību jau pirmajās 5 darba
+minūtēs.
+
+
+5. SKRIPTA PIEMĒRS (BLOKU LOĢISKĀ SECĪBA)
+----------------------------------------------------------------------------------------------------
+[KAD NOSPIESTS ZAĻAIS KARODZIŅŠ] (When green flag clicked)
+   ↓
+[PATEIKT "Aiziet!" UZ 2 SEKUNDĒM] (Say "Aiziet!" for 2 secs)
+   ↓
+[ATKĀRTOT 10 REIZES] (Repeat 10 times):
+    • Paiet 10 soļus uz priekšu (Move 10 steps)
+    • Atskaņot skaņu "Solis" (Play sound "Step")
+   ↓
+[PATEIKT "Finišs sasniegts!"] (Say "Finišs sasniegts!")
+
+
+6. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Scratch ir ideāla platforma pirmajam solim programmēšanā un algoritmu izpratnē.
+2. Programmas un skripti tiek veidoti no vizuāliem krāsu blokiem gluži kā LEGO konstruktors.
+3. Scratch attīsta programmētāja domāšanas veidu, pilnībā novēršot risku pieļaut sintakses kļūdas.
+====================================================================================================
