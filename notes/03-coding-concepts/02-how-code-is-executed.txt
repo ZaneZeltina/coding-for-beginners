@@ -1,0 +1,80 @@
+====================================================================================================
+02. KĀ TIEK IZPILDĪTS PROGRAMMĒŠANAS KODS?
+====================================================================================================
+
+1. KAS IR KODA IZPILDE? (CODE EXECUTION)
+----------------------------------------------------------------------------------------------------
+Koda izpilde (code execution) vai programmas palaišana (running a program) ir process, kurā dators nolasa programmētāja
+uzrakstītās instrukcijas no faila un soli pa solim tās reāli izpilda.
+
+
+2. KODA LASĪŠANAS LOĢIKA UN SECĪBA (CONTROL FLOW)
+----------------------------------------------------------------------------------------------------
+Lielākajā daļā programmēšanas valodu kods tiek lasīts un izpildīts standarta secībā: no augšas uz leju un no kreisās uz
+labo pusi, rindiņu pa rindiņai.
+
+Taču šo izpildes plūsmu programmētājs var elastīgi vadīt un mainīt:
+* Atkārtošana / Cikli (Loops): Likt programmai atgriezties atpakaļ un izpildīt noteiktu koda posmu vairākas reizes
+(piem., `for`, `while` cikli).
+* Pārlēkšana / Zarošanās (Branching / Conditionals): Izlaist konkrētas koda rindiņas, ja izpildās vai neizpildās
+noteikti nosacījumi (piem., `if / else`).
+* Pārtraukšana / Apturēšana (Termination / Exit): Piespiedu kārtā priekšlaicīgi apturēt ciklu vai pilnībā pabeigt visas
+programmas darbību.
+
+
+3. ĀTRUMS UN EFEKTIVITĀTE (PERFORMANCE & OPTIMIZATION)
+----------------------------------------------------------------------------------------------------
+Izstrādātāji pievērš milzīgu uzmanību koda veiktspējai un ātrumam. Ja vienu un to pašu uzdevumu var atrisināt vairākos
+veidos, tiek izvēlēts efektīvākais — tas, kurš patērē mazāk atmiņas un strādā par milisekundes daļām ātrāk.
+
+Augsts ātrums ir kritiski svarīgs daudzās nozarēs. Piemēram, finanšu sektorā un biržas tirdzniecībā (High-Frequency
+Trading) transakciju apstrādes ātrumam ir izšķiroša nozīme, un koda optimizācija tiešā veidā ietekmē rezultātus un peļņu.
+
+
+4. KAS IR IDE? (INTEGRATED DEVELOPMENT ENVIRONMENT)
+----------------------------------------------------------------------------------------------------
+IDE (Integrated Development Environment jeb Integrētā izstrādes vide) ir specializēta programma izstrādātājiem, kas
+vienuviet apvieno visus ikdienas darbam nepieciešamos rīkus.
+
+IDE nodrošina ērtu darba vidi, kurā var:
+* Rakstīt un rediģēt kodu ar sintakses izcelšanu un kļūdu ieteikumiem (Code Editor & Autocomplete).
+* Palaist un testēt programmas ar vienu pogas klikšķi (Execution & Testing).
+* Atrast un izlabot kļūdas, soli pa solim sekojot koda izpildei (Atkļūdošana / Debugging).
+* Pārvaldīt koda versijas (Git integrācija).
+
+Populāras IDE un koda redaktori: WebStorm, PyCharm, Visual Studio Code (VS Code), IntelliJ IDEA.
+
+
+5. DZĪVES ANALOĢIJA: Montāžas instrukcija un meistara darbnīca
+----------------------------------------------------------------------------------------------------
+* Koda izpilde: Gluži kā mēbeļu salikšanas instrukcija — tu lasi soļus no 1. līdz pēdējam. Ja 3. solī teikts "atkārto šo darbību 4 reizes visām mēbeles kājām", tu izpildi ciklu (loop).
+* IDE: Tā nav tikai vienkārša piezīmju lapiņa, bet gan pilnībā aprīkota meistara darbnīca, kur pie rokas ir gan pareizie instrumenti (redaktors), gan testa stends (palaišana), gan lupa defektu atrašanai (atkļūdotājs).
+
+
+6. PRAKTISKS PIEMĒRS: KODA IZPILDES PLŪSMA PYTHON
+----------------------------------------------------------------------------------------------------
+# 1. Kods izpildās secīgi no augšas uz leju:
+print("Programma sāk darbu...")
+
+# 2. Zarošanās (nosacījums): izlaiž nevajadzīgo rindiņu
+lietotajs_ir_admins = True
+
+if lietotajs_ir_admins:
+    print("Pieeja vadības panelim atļauta.")
+else:
+    print("Pieeja liegta.")
+
+# 3. Cikls: atkārto darbību 3 reizes
+for reize in range(1, 4):
+    print(f"Apstrādājam failu Nr. {reize}")
+
+print("Programma veiksmīgi pabeigta!")
+
+
+7. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Kods parasti izpildās secīgi no augšas uz leju, taču ar cikliem un nosacījumiem šo plūsmu var mainīt.
+2. Efektivitāte un koda ātrums ir būtiski, īpaši liela mēroga un reāllaika sistēmās.
+3. IDE (kā WebStorm vai PyCharm) ir izstrādātāja galvenā darba vide, kas apvieno koda rakstīšanu, palaišanu un
+atkļūdošanu.
+====================================================================================================
