@@ -28,7 +28,8 @@ Izstrādātāji pievērš milzīgu uzmanību koda veiktspējai un ātrumam. Ja v
 veidos, tiek izvēlēts efektīvākais — tas, kurš patērē mazāk atmiņas un strādā par milisekundes daļām ātrāk.
 
 Augsts ātrums ir kritiski svarīgs daudzās nozarēs. Piemēram, finanšu sektorā un biržas tirdzniecībā (High-Frequency
-Trading) transakciju apstrādes ātrumam ir izšķiroša nozīme, un koda optimizācija tiešā veidā ietekmē rezultātus un peļņu.
+Trading) transakciju apstrādes ātrumam ir izšķiroša nozīme, un koda optimizācija tiešā veidā ietekmē rezultātus un
+peļņu.
 
 
 4. KAS IR IDE? (INTEGRATED DEVELOPMENT ENVIRONMENT)
@@ -47,8 +48,10 @@ Populāras IDE un koda redaktori: WebStorm, PyCharm, Visual Studio Code (VS Code
 
 5. DZĪVES ANALOĢIJA: Montāžas instrukcija un meistara darbnīca
 ----------------------------------------------------------------------------------------------------
-* Koda izpilde: Gluži kā mēbeļu salikšanas instrukcija — tu lasi soļus no 1. līdz pēdējam. Ja 3. solī teikts "atkārto šo darbību 4 reizes visām mēbeles kājām", tu izpildi ciklu (loop).
-* IDE: Tā nav tikai vienkārša piezīmju lapiņa, bet gan pilnībā aprīkota meistara darbnīca, kur pie rokas ir gan pareizie instrumenti (redaktors), gan testa stends (palaišana), gan lupa defektu atrašanai (atkļūdotājs).
+* Koda izpilde: Gluži kā mēbeļu salikšanas instrukcija — tu lasi soļus no 1. līdz pēdējam. Ja 3. solī teikts "atkārto
+šo darbību 4 reizes visām mēbeles kājām", tu izpildi ciklu (loop).
+* IDE: Tā nav tikai vienkārša piezīmju lapiņa, bet gan pilnībā aprīkota meistara darbnīca, kur pie rokas ir gan
+pareizie instrumenti (redaktors), gan testa stends (palaišana), gan lupa defektu atrašanai (atkļūdotājs).
 
 
 6. PRAKTISKS PIEMĒRS: KODA IZPILDES PLŪSMA PYTHON
