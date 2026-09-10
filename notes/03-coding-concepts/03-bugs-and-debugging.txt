@@ -1,0 +1,76 @@
+====================================================================================================
+03. KĻŪDAS KODĀ UN ATKĻŪDOŠANA (BUGS & DEBUGGING)
+====================================================================================================
+
+1. KAS IR KĻŪDA (BAGS) UN ATKĻŪDOŠANA (DEBAGOŠANA)?
+----------------------------------------------------------------------------------------------------
+* Kļūda kodā jeb bags (Bug): Nepilnība, defekts vai kļūme programmā, kuras dēļ tā nedarbojas, avarē vai rada nepareizu
+rezultātu. Kļūda var būt pavisam vienkārša pārrakstīšanās (typo) — piemēram, nejauši nospiests cipars burta vietā vai
+aizmirsts simbols.
+* Atkļūdošana jeb debagošana (Debugging): Rūpīgs kļūdu meklēšanas, analīzes un labošanas process programmā.
+
+
+2. GALVENIE KĻŪDU VEIDI
+----------------------------------------------------------------------------------------------------
+* Sintakses kļūda (Syntax Error):
+  Rodas, ja tiek pārkāpti programmēšanas valodas "pareizrakstības likumi".
+  Piemērs: aizmirsta noslēdzošā pēdiņa tekstam `print("Sveika pasaule)`, trūkstoša iekava vai nepareizas koda atkāpes
+  (IndentationError). Šādu kodu dators vispār nespēj palaist.
+
+* Loģiskā kļūda (Logic Error):
+  Rodas, ja kods uzrakstīts sintaktiski pareizi un programma darbojas bez avārijām, taču rezultāts ir aplams, jo
+  kļūdaina ir programmētāja izdomātā loģika.
+  Piemērs: saskaitīšanas vietā nejauši ielikta atņemšana vai sajaukta salīdzināšanas zīme (`>` vietā ierakstīts `<`).
+
+* Izpildlaika kļūda (Runtime Error / Exception):
+  Kļūda, kas parādās programmas darbības laikā neparedzētu apstākļu dēļ.
+  Piemērs: mēģinājums dalīt skaitli ar nulli vai mēģinājums atvērt failu, kas datorā neeksistē.
+
+
+3. KĀ EFEKTĪVI MEKLĒT UN LABOT KĻŪDAS?
+----------------------------------------------------------------------------------------------------
+* Izmanto atkļūdotāju (Debugger):
+  Mūsdienu izstrādes vidēs (kā WebStorm, PyCharm, VS Code) ir iebūvēts rīks — atkļūdotājs (Debugger). Tas ļauj izpildīt
+  programmu soli pa solim (Step-by-Step) un reāllaikā vērot, kā mainās dati un mainīgo vērtības atmiņā.
+
+* Rūpīgi lasi kļūdu paziņojumus (Error Messages / Stack Trace):
+  Kad programma apstājas ar kļūdu, dators parasti skaidri pasaka priekšā: faila nosaukumu, precīzu koda rindiņas numuru
+  un kļūdas iemeslu. Puse no atrisinājuma slēpjas uzmanīgā kļūdas teksta izlasīšanā.
+
+* Testē kodu bieži un mazos soļos (Incremental Development):
+  Nekad neraksti simtiem koda rindiņu vienā piegājienā bez pārbaudes. Uzrakstīji nelielu loģikas posmu (3–5 rindiņas) —
+  uzreiz palaid un pārbaudi, vai tas strādā. Ja kods rakstīts ilgi bez testēšanas, atrast vainīgo vietu būs daudz
+  grūtāk.
+
+
+4. DZĪVES ANALOĢIJA: Detektīva izmeklēšana un auto diagnostika
+----------------------------------------------------------------------------------------------------
+* Bags (Bug): Auto panelī iedegas brīdinājuma lampiņa "Check Engine", vai auto stūre velk pa kreisi.
+* Atkļūdošana (Debugging): Mehāniķis pieslēdz diagnostikas iekārtu (Debugger), soli pa solim pārbauda sensoru rādījumus un atrod, kur tieši radies bojājums, lai to salabotu.
+
+
+5. PRAKTISKS PIEMĒRS: KĻŪDAS UN TO LABOJUMI PYTHON
+----------------------------------------------------------------------------------------------------
+# 1. PIEMĒRS: Sintakses kļūda (SyntaxError)
+# Nepareizi: print("Sveika, pasaule!   <- trūkst noslēdzošās pēdiņas un iekavas
+# Pareizi:
+print("Sveika, pasaule!")
+
+# 2. PIEMĒRS: Loģiskā kļūda (Logic Error)
+cena = 100
+atlaide = 20
+
+# Nepareizi: gala_cena = cena + atlaide  (atlaidei vajadzētu cenu samazināt, nevis palielināt!)
+# Pareizi:
+gala_cena = cena - atlaide
+print(f"Gala cena ar atlaidi: {gala_cena} EUR")
+
+
+6. ZELTA PADOMS IESĀCĒJAM (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Kļūdas ir dabiska un neizbēgama programmēšanas sastāvdaļa — pat paši pieredzējušākie programmētāji ikdienā pieļauj
+kļūdas.
+2. Nebaidies no kļūdu paziņojumiem — uztver tos kā datora norādes un palīdzību.
+3. Ievēro disciplīnu: uzraksti nedaudz koda ➔ uzreiz notestē ➔ turpini tālāk. Katra atrastā un izlabotā kļūda tevi
+padara par zinošāku izstrādātāju!
+====================================================================================================
