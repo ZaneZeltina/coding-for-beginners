@@ -1,0 +1,120 @@
+====================================================================================================
+04. KAS IR PSEIDOKODS? (PSEUDOCODE)
+====================================================================================================
+
+1. SKAIDROJUMS
+----------------------------------------------------------------------------------------------------
+Pseidokods (pseudocode) ir cilvēkam saprotams algoritma pieraksts. Tas apraksta,
+kas programmai jādara un kādā secībā, neievērojot konkrētas programmēšanas valodas sintaksi.
+
+Algoritms (algorithm) ir uzdevuma risināšanas soļu kopums.
+Pseidokods ir viens no veidiem, kā šos soļus pierakstīt.
+
+Pseidokodu var rakstīt latviski, angliski vai citā valodā. Tam nav vienas universālas
+sintakses, taču pierakstam jābūt skaidram, loģiskam un konsekventam.
+
+Pseidokodu parasti nevar tieši palaist datorā — tas ir plāns īstā koda izveidei.
+
+
+2. KĀPĒC IZMANTO PSEIDOKODU?
+----------------------------------------------------------------------------------------------------
+* Plānošana (Planning):
+  Palīdz sadalīt uzdevumu mazākos soļos pirms programmēšanas.
+
+* Uzmanība loģikai (Logic):
+  Ļauj domāt par programmas darbību, nevis iekavām, semikoliem vai citiem
+  konkrētas valodas sintakses noteikumiem.
+
+* Saziņa (Communication):
+  Palīdz izskaidrot risinājumu citiem, arī cilvēkiem bez programmēšanas pieredzes.
+
+* Loģikas pārbaude (Logic Checking):
+  Ļauj iziet cauri soļiem un pamanīt trūkstošus nosacījumus vai nepareizu secību.
+
+Vienu un to pašu pseidokodā aprakstīto algoritmu var īstenot dažādās programmēšanas
+valodās, piemēram, Python vai JavaScript.
+
+
+3. KĀ RAKSTĪT PSEIDOKODU?
+----------------------------------------------------------------------------------------------------
+* Sāc ar mērķi: kādu uzdevumu programma risinās?
+* Norādi ievades datus (Input): kāda informācija programmai būs vajadzīga?
+* Pieraksti darbības to izpildes secībā.
+* Izmanto JA / CITĀDI, ja darbība ir atkarīga no nosacījuma (Condition).
+* Izmanto ATKĀRTO vai KAMĒR, ja vajadzīgs cikls (Loop).
+* Ar atkāpēm parādi, kuras darbības pieder nosacījumam vai ciklam.
+* Norādi rezultātu (Output): ko programma parādīs vai izveidos?
+
+Svarīgi: vienota sintakse nav obligāta, bet precizitāte ir nepieciešama.
+Piemēram, "apstrādā pirkumu" ir pārāk vispārīgi, ja vēl nav skaidrs,
+kādas darbības šī apstrāde ietver.
+
+
+4. DZĪVES ANALOĢIJA: PLĀNS PIRMS GATAVOŠANAS
+----------------------------------------------------------------------------------------------------
+Pirms gatavo vakariņas, vari pierakstīt:
+
+1. Pārbaudi, vai mājās ir makaroni.
+2. JA makaroni ir:
+       Uzvāri makaronus.
+   CITĀDI:
+       Pagatavo citu ēdienu.
+3. Pasniedz vakariņas.
+
+Šis plāns parāda darbību secību un izvēli atkarībā no apstākļiem.
+Pseidokods līdzīgi palīdz izplānot programmas darbību pirms īstā koda rakstīšanas.
+
+
+5. PRAKTISKS PIEMĒRS: PIRKUMA ATLAIDE
+----------------------------------------------------------------------------------------------------
+Uzdevums: ja pirkuma summa ir vismaz 50 EUR, piemēro 10 % atlaidi.
+Pretējā gadījumā summa nemainās.
+
+PSEIDOKODS:
+
+SĀKUMS
+    pirkuma_summa = 60
+
+    JA pirkuma_summa >= 50:
+        gala_summa = pirkuma_summa * 0.90
+    CITĀDI:
+        gala_summa = pirkuma_summa
+
+    PARĀDI gala_summa
+BEIGAS
+
+
+TAS PATS ALGORITMS PYTHON VALODĀ:
+
+pirkuma_summa = 60
+
+if pirkuma_summa >= 50:
+    gala_summa = pirkuma_summa * 0.90
+else:
+    gala_summa = pirkuma_summa
+
+print(f"Jāmaksā: {gala_summa:.2f} EUR")
+
+
+Rezultāts:
+Jāmaksā: 54.00 EUR
+
+Skaidrojums:
+* >= nozīmē "lielāks vai vienāds".
+* Reizinot ar 0.90, iegūstam 90 % no sākotnējās summas — piemērojam 10 % atlaidi.
+* :.2f parāda skaitli ar divām zīmēm aiz komata.
+
+Pārbaudot loģiku, izmēģini arī robežgadījumus:
+* 49 EUR → atlaides nav.
+* 50 EUR → atlaide ir, jāmaksā 45 EUR.
+* 60 EUR → atlaide ir, jāmaksā 54 EUR.
+
+
+6. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Pseidokods ir cilvēkam paredzēts algoritma pieraksts.
+2. Tas palīdz izplānot un pārbaudīt loģiku pirms īstā koda rakstīšanas.
+3. Tam nav vienas universālas sintakses, bet soļiem jābūt skaidriem un precīziem.
+4. Nosacījumi un cikli palīdz aprakstīt izvēles un atkārtotas darbības.
+5. Vienu algoritmu pēc tam var īstenot dažādās programmēšanas valodās.
+====================================================================================================
