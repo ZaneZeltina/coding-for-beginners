@@ -1,0 +1,157 @@
+====================================================================================================
+05. UZDEVUMA SADALĪŠANA MAZĀKĀS DAĻĀS (TASK DECOMPOSITION)
+====================================================================================================
+
+1. KAS IR DEKOMPOZĪCIJA?
+----------------------------------------------------------------------------------------------------
+Dekompozīcija (decomposition) ir sarežģīta uzdevuma sadalīšana mazākās,
+vienkāršākās un saprotamākās daļās.
+
+Tā vietā, lai mēģinātu uzrakstīt visu programmu uzreiz, vispirms noskaidro:
+* Kādi mazāki uzdevumi ir jāatrisina?
+* Kādi dati katram solim nepieciešami?
+* Kādu rezultātu katrs solis dos?
+* Kā šīs daļas sadarbosies?
+
+Piemēram, uzdevumu "aprēķināt pirkuma gala summu" var sadalīt:
+1. Saņemt preču cenas.
+2. Aprēķināt kopējo summu.
+3. Piemērot atlaidi.
+4. Parādīt rezultātu.
+
+Plānošanas laikā sadalām pašu uzdevumu. Rakstot kodu, šīs daļas varam īstenot
+atsevišķās funkcijās (functions), moduļos (modules) vai klasēs (classes).
+
+
+2. VIENAS ATBILDĪBAS PRINCIPS (SINGLE RESPONSIBILITY PRINCIPLE — SRP)
+----------------------------------------------------------------------------------------------------
+Vienas atbildības princips palīdz veidot programmas daļas ar skaidri nodalītiem
+pienākumiem. Precīzāk: modulim vai klasei vajadzētu būt vienam galvenajam
+iemeslam mainīties — vienai atbildības jomai.
+
+Iesācējam noderīgs orientieris:
+katrai funkcijai uztici vienu skaidri nosaucamu uzdevumu.
+
+Grūtāk uzturams risinājums:
+Viena funkcija nolasa failu, aprēķina atlaidi, saglabā datus un nosūta e-pastu.
+
+Pārskatāmāks risinājums:
+* Viena funkcija nolasa datus.
+* Otra aprēķina atlaidi.
+* Trešā saglabā rezultātu.
+* Ceturtā nosūta e-pastu.
+
+Galvenā funkcija var koordinēt šo darbību secību — arī koordinēšana ir
+atsevišķs pienākums.
+
+Šāds sadalījums mazina risku, ka vienas daļas labojums sabojās citu daļu.
+Tomēr daļas joprojām var būt savstarpēji atkarīgas, tāpēc izmaiņas ir jāpārbauda.
+
+
+3. GALVENIE IEGUVUMI
+----------------------------------------------------------------------------------------------------
+* Vieglāka plānošana (Planning):
+  Mazam uzdevumam ir vieglāk saprast nepieciešamos soļus un novērtēt darba apjomu.
+
+* Atkārtota koda izmantošana (Code Reuse):
+  Vienu funkciju var izsaukt vairākās vietās, nekopējot tās kodu.
+
+* Vienkāršāka testēšana (Testing):
+  Katru daļu var pārbaudīt atsevišķi ar dažādiem ievades datiem.
+
+* Vieglāka atkļūdošana (Debugging):
+  Ja rezultāts ir nepareizs, vieglāk atrast konkrēto darbību, kurā radusies kļūda.
+
+* Labāka lasāmība un uzturēšana (Readability & Maintenance):
+  Skaidri nosaukumi un nodalīti pienākumi palīdz saprast un mainīt programmu.
+
+
+4. DZĪVES ANALOĢIJA: VAKARIŅU GATAVOŠANA
+----------------------------------------------------------------------------------------------------
+"Pagatavot vakariņas" ir liels, vispārīgs uzdevums. To var sadalīt:
+
+1. Izvēlēties ēdienu.
+2. Sagatavot nepieciešamos produktus.
+3. Pagatavot ēdienu.
+4. Uzklāt galdu.
+5. Pasniegt maltīti.
+
+Arī soli "sagatavot produktus" var sadalīt vēl sīkāk:
+nomazgāt dārzeņus, tos nomizot un sagriezt.
+
+Programmēšanā rīkojamies līdzīgi: dalām uzdevumu tik ilgi, līdz katra daļa
+ir pietiekami skaidra, lai to varētu īstenot un pārbaudīt.
+
+
+5. PRAKTISKS PIEMĒRS: PIRKUMA SUMMAS APRĒĶINS
+----------------------------------------------------------------------------------------------------
+Uzdevums:
+Saskaitīt preču cenas, piemērot 10 % atlaidi un parādīt gala summu.
+
+Šajā piemērā atlaide attiecas uz visu pirkumu neatkarīgi no tā summas.
+
+PSEIDOKODS:
+
+SĀKUMS
+    preču_cenas = [20, 15, 25]
+    kopējā_summa = APRĒĶINI_KOPSUMMU(preču_cenas)
+    gala_summa = PIEMĒRO_ATLAIDI(kopējā_summa, 10)
+    PARĀDI_REZULTĀTU(gala_summa)
+BEIGAS
+
+
+PYTHON KODS:
+
+def aprekinat_kopsummu(cenas):
+    return sum(cenas)
+
+
+def piemerot_atlaidi(summa, atlaide_procentos):
+    return summa * (1 - atlaide_procentos / 100)
+
+
+def paradit_rezultatu(summa):
+    print(f"Jāmaksā: {summa:.2f} EUR")
+
+
+precu_cenas = [20, 15, 25]
+
+kopeja_summa = aprekinat_kopsummu(precu_cenas)
+gala_summa = piemerot_atlaidi(kopeja_summa, 10)
+paradit_rezultatu(gala_summa)
+
+
+Rezultāts:
+Jāmaksā: 54.00 EUR
+
+Skaidrojums:
+* def definē funkciju — nosauktu koda daļu, kuru var izsaukt.
+* return atdod funkcijas aprēķināto rezultātu.
+* sum(cenas) saskaita sarakstā esošās cenas.
+* Katrai no trim funkcijām ir savs skaidrs uzdevums.
+* Pēdējās koda rindas savieno šos uzdevumus vienotā darbību secībā.
+
+Aprēķinus var pārbaudīt atsevišķi:
+* Cenas [20, 15, 25] → kopsumma 60.
+* Summa 60 un atlaide 10 % → gala summa 54.
+* Summa 60 un atlaide 0 % → gala summa 60.
+
+
+6. CIK SĪKI SADALĪT UZDEVUMU?
+----------------------------------------------------------------------------------------------------
+Nav nepieciešams katru koda rindiņu ievietot atsevišķā funkcijā.
+
+Labs orientieris: vai vari īsi un skaidri pateikt, ko šī daļa dara?
+Ja skaidrojumā ir daudz savstarpēji nesaistītu pienākumu, apsver to sadalīšanu.
+
+Mērķis ir vieglāk saprotams kods, nevis pēc iespējas vairāk funkciju.
+
+
+7. GALVENAIS, KO ATCERĒTIES (KEY TAKEAWAYS)
+----------------------------------------------------------------------------------------------------
+1. Sarežģītu uzdevumu sadali mazākos, saprotamos apakšuzdevumos.
+2. Katrai daļai nosaki skaidru pienākumu, nepieciešamos datus un rezultātu.
+3. Pārdomāts sadalījums atvieglo testēšanu, atkļūdošanu un koda izmantošanu atkārtoti.
+4. Pārbaudi gan atsevišķās daļas, gan to sadarbību.
+5. Dekompozīcija ir domāšanas paņēmiens, ko vari izmantot vēl pirms koda rakstīšanas.
+====================================================================================================
