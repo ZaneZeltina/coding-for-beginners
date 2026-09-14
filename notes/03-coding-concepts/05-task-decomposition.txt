@@ -4,8 +4,7 @@
 
 1. KAS IR DEKOMPOZĪCIJA?
 ----------------------------------------------------------------------------------------------------
-Dekompozīcija (decomposition) ir sarežģīta uzdevuma sadalīšana mazākās,
-vienkāršākās un saprotamākās daļās.
+Dekompozīcija (decomposition) ir sarežģīta uzdevuma sadalīšana mazākās, vienkāršākās un saprotamākās daļās.
 
 Tā vietā, lai mēģinātu uzrakstīt visu programmu uzreiz, vispirms noskaidro:
 * Kādi mazāki uzdevumi ir jāatrisina?
@@ -19,18 +18,16 @@ Piemēram, uzdevumu "aprēķināt pirkuma gala summu" var sadalīt:
 3. Piemērot atlaidi.
 4. Parādīt rezultātu.
 
-Plānošanas laikā sadalām pašu uzdevumu. Rakstot kodu, šīs daļas varam īstenot
-atsevišķās funkcijās (functions), moduļos (modules) vai klasēs (classes).
+Plānošanas laikā sadalām pašu uzdevumu. Rakstot kodu, šīs daļas varam īstenot funkcijās (functions), moduļos
+(modules) vai klasēs (classes).
 
 
 2. VIENAS ATBILDĪBAS PRINCIPS (SINGLE RESPONSIBILITY PRINCIPLE — SRP)
 ----------------------------------------------------------------------------------------------------
-Vienas atbildības princips palīdz veidot programmas daļas ar skaidri nodalītiem
-pienākumiem. Precīzāk: modulim vai klasei vajadzētu būt vienam galvenajam
-iemeslam mainīties — vienai atbildības jomai.
+Vienas atbildības princips palīdz veidot programmas daļas ar skaidri nodalītiem pienākumiem. Precīzāk: modulim
+vai klasei vajadzētu būt vienam galvenajam iemeslam mainīties — vienai atbildības jomai.
 
-Iesācējam noderīgs orientieris:
-katrai funkcijai uztici vienu skaidri nosaucamu uzdevumu.
+Iesācējam noderīgs orientieris: katrai funkcijai uztici vienu skaidri nosaucamu uzdevumu.
 
 Grūtāk uzturams risinājums:
 Viena funkcija nolasa failu, aprēķina atlaidi, saglabā datus un nosūta e-pastu.
@@ -41,11 +38,10 @@ Pārskatāmāks risinājums:
 * Trešā saglabā rezultātu.
 * Ceturtā nosūta e-pastu.
 
-Galvenā funkcija var koordinēt šo darbību secību — arī koordinēšana ir
-atsevišķs pienākums.
+Galvenā funkcija var koordinēt šo darbību secību — arī koordinēšana ir atsevišķs pienākums.
 
-Šāds sadalījums mazina risku, ka vienas daļas labojums sabojās citu daļu.
-Tomēr daļas joprojām var būt savstarpēji atkarīgas, tāpēc izmaiņas ir jāpārbauda.
+Šāds sadalījums mazina risku, ka vienas daļas labojums sabojās citu daļu. Tomēr daļas joprojām var būt
+savstarpēji atkarīgas, tāpēc izmaiņas ir jāpārbauda.
 
 
 3. GALVENIE IEGUVUMI
@@ -79,8 +75,8 @@ Tomēr daļas joprojām var būt savstarpēji atkarīgas, tāpēc izmaiņas ir j
 Arī soli "sagatavot produktus" var sadalīt vēl sīkāk:
 nomazgāt dārzeņus, tos nomizot un sagriezt.
 
-Programmēšanā rīkojamies līdzīgi: dalām uzdevumu tik ilgi, līdz katra daļa
-ir pietiekami skaidra, lai to varētu īstenot un pārbaudīt.
+Programmēšanā rīkojamies līdzīgi: dalām uzdevumu tik ilgi, līdz katra daļa ir pietiekami skaidra, lai to
+varētu īstenot un pārbaudīt.
 
 
 5. PRAKTISKS PIEMĒRS: PIRKUMA SUMMAS APRĒĶINS
@@ -141,8 +137,8 @@ Aprēķinus var pārbaudīt atsevišķi:
 ----------------------------------------------------------------------------------------------------
 Nav nepieciešams katru koda rindiņu ievietot atsevišķā funkcijā.
 
-Labs orientieris: vai vari īsi un skaidri pateikt, ko šī daļa dara?
-Ja skaidrojumā ir daudz savstarpēji nesaistītu pienākumu, apsver to sadalīšanu.
+Labs orientieris: vai vari īsi un skaidri pateikt, ko šī daļa dara? Ja skaidrojumā ir daudz savstarpēji
+nesaistītu pienākumu, apsver to sadalīšanu.
 
 Mērķis ir vieglāk saprotams kods, nevis pēc iespējas vairāk funkciju.
 

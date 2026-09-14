@@ -1,0 +1,101 @@
+====================================================================================================
+06. KOMENTĀRI KODĀ UN KODA PĀRSKATĪŠANA (CODE COMMENTS & CODE REVIEW)
+====================================================================================================
+
+1. KOMENTĀRI KODĀ
+----------------------------------------------------------------------------------------------------
+Komentārs (comment) ir cilvēkam paredzēta piezīme kodā. Tas netiek izpildīts kā programmas darbība.
+
+Vispirms raksti saprotamu kodu ar skaidriem nosaukumiem. Komentārus izmanto, lai paskaidrotu sarežģītu loģiku,
+ierobežojumus vai risinājuma iemeslu.
+
+Labs komentārs:
+* Paskaidro, KĀPĒC kaut kas darīts, nevis atkārto acīmredzamo.
+* Ir īss, skaidrs un atrodas pie attiecīgā koda.
+* Tiek atjaunināts, kad mainās kods.
+
+Mācību piemēros komentāri var arī palīdzēt izprast sintaksi.
+
+
+2. KOMENTĀRU PIERAKSTS
+----------------------------------------------------------------------------------------------------
+Python:
+
+# Vienas rindas komentārs.
+cena = 10  # Cena eiro.
+
+# Garākam komentāram katru rindu
+# sāk ar simbolu #.
+
+JavaScript:
+
+// Vienas rindas komentārs.
+
+/* Bloka komentārs,
+   kas var aizņemt vairākas rindas. */
+
+Python trīskāršās pēdiņas nav komentāru sintakse. Tās veido teksta virkni.
+Funkcijas sākumā šāda virkne var kalpot kā dokumentācija (docstring):
+
+def aprekinat_summu(cena, skaits):
+    """Atgriež preču kopējo cenu."""
+    return cena * skaits
+
+
+3. KODA AIZKOMENTĒŠANA (COMMENTING OUT)
+----------------------------------------------------------------------------------------------------
+Pārvēršot koda rindu par komentāru, to var īslaicīgi atspējot:
+
+# print("Pārbaudes ziņojums.")
+print("Programma darbojas.")
+
+Izpildīsies tikai otrā rinda.
+
+Aizkomentēšana noder pārbaudēm. Ilgstoši nevajadzīgu kodu labāk izņemt; iepriekšējās versijas saglabā versiju
+kontroles sistēma, piemēram, Git.
+
+
+4. KODA PĀRSKATĪŠANA (CODE REVIEW)
+----------------------------------------------------------------------------------------------------
+Cits izstrādātājs izskata koda izmaiņas, parasti pirms to pievienošanas projekta galvenajai versijai.
+
+Pārbauda:
+* Vai kods pareizi risina uzdevumu?
+* Vai tas ir saprotams un viegli maināms?
+* Vai nav drošības problēmu?
+* Vai pārbaudīti būtiskie scenāriji?
+* Ja nepieciešams — vai veiktspēja ir pietiekama?
+
+Mērķis ir atrast kļūdas, uzlabot kodu un dalīties pieredzē. Atsauksmes sniedz konkrēti un cieņpilni: vērtē
+kodu, nevis autora spējas. Koda pārskatīšana papildina testēšanu, bet to neaizstāj.
+
+
+5. PRAKTISKS PIEMĒRS
+----------------------------------------------------------------------------------------------------
+Prasība: bezmaksas piegāde pirkumiem no 50 EUR, ieskaitot.
+
+Kļūda: nosacījums > 50 neietver tieši 50 EUR. Pārskatītājs iesaka izmantot >= 50 un pārbaudīt šo robežvērtību.
+
+Labotais Python kods:
+
+pirkuma_summa = 50
+
+# Bezmaksas piegādes slieksnis ietver arī tieši 50 EUR.
+if pirkuma_summa >= 50:
+    print("Bezmaksas piegāde")
+else:
+    print("Piegāde maksā 3 EUR")
+
+Pārbaudes:
+* 49 EUR → piegāde maksā 3 EUR.
+* 50 EUR un 51 EUR → bezmaksas piegāde.
+
+
+6. ANALOĢIJA UN GALVENAIS
+----------------------------------------------------------------------------------------------------
+Kods ir kā recepte, komentāri — noderīgas piezīmes tās malās. Koda pārskatīšana ir receptes pārbaude, ko veic
+cits pavārs, bet testēšana — tās izmēģināšana praksē.
+
+Atceries: skaidrs kods, jēgpilni un aktuāli komentāri, cieņpilnas atsauksmes un pārbaudes palīdz veidot
+kvalitatīvu programmu.
+====================================================================================================

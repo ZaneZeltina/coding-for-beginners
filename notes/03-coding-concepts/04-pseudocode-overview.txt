@@ -4,15 +4,13 @@
 
 1. SKAIDROJUMS
 ----------------------------------------------------------------------------------------------------
-Pseidokods (pseudocode) ir cilvēkam saprotams algoritma pieraksts. Tas apraksta,
-kas programmai jādara un kādā secībā, neievērojot konkrētas programmēšanas valodas sintaksi.
+Pseidokods (pseudocode) ir cilvēkam saprotams algoritma pieraksts. Tas apraksta, kas programmai jādara un kādā
+secībā, neievērojot konkrētas programmēšanas valodas sintaksi.
 
 Algoritms (algorithm) ir uzdevuma risināšanas soļu kopums.
-Pseidokods ir viens no veidiem, kā šos soļus pierakstīt.
 
-Pseidokodu var rakstīt latviski, angliski vai citā valodā. Tam nav vienas universālas
-sintakses, taču pierakstam jābūt skaidram, loģiskam un konsekventam.
-
+Pseidokods ir viens no veidiem, kā šos soļus pierakstīt. Pseidokodu var rakstīt latviski, angliski vai citā
+valodā. Tam nav vienas universālas sintakses, taču pierakstam jābūt skaidram, loģiskam un konsekventam.
 Pseidokodu parasti nevar tieši palaist datorā — tas ir plāns īstā koda izveidei.
 
 
@@ -22,8 +20,8 @@ Pseidokodu parasti nevar tieši palaist datorā — tas ir plāns īstā koda iz
   Palīdz sadalīt uzdevumu mazākos soļos pirms programmēšanas.
 
 * Uzmanība loģikai (Logic):
-  Ļauj domāt par programmas darbību, nevis iekavām, semikoliem vai citiem
-  konkrētas valodas sintakses noteikumiem.
+  Ļauj domāt par programmas darbību, nevis iekavām, semikoliem vai citiem konkrētas valodas sintakses
+  noteikumiem.
 
 * Saziņa (Communication):
   Palīdz izskaidrot risinājumu citiem, arī cilvēkiem bez programmēšanas pieredzes.
@@ -31,8 +29,8 @@ Pseidokodu parasti nevar tieši palaist datorā — tas ir plāns īstā koda iz
 * Loģikas pārbaude (Logic Checking):
   Ļauj iziet cauri soļiem un pamanīt trūkstošus nosacījumus vai nepareizu secību.
 
-Vienu un to pašu pseidokodā aprakstīto algoritmu var īstenot dažādās programmēšanas
-valodās, piemēram, Python vai JavaScript.
+Vienu un to pašu pseidokodā aprakstīto algoritmu var īstenot dažādās programmēšanas valodās, piemēram, Python
+vai JavaScript.
 
 
 3. KĀ RAKSTĪT PSEIDOKODU?
@@ -45,9 +43,8 @@ valodās, piemēram, Python vai JavaScript.
 * Ar atkāpēm parādi, kuras darbības pieder nosacījumam vai ciklam.
 * Norādi rezultātu (Output): ko programma parādīs vai izveidos?
 
-Svarīgi: vienota sintakse nav obligāta, bet precizitāte ir nepieciešama.
-Piemēram, "apstrādā pirkumu" ir pārāk vispārīgi, ja vēl nav skaidrs,
-kādas darbības šī apstrāde ietver.
+Svarīgi: vienota sintakse nav obligāta, bet precizitāte ir nepieciešama. Piemēram, "apstrādā pirkumu" ir pārāk
+vispārīgi, ja vēl nav skaidrs, kādas darbības šī apstrāde ietver.
 
 
 4. DZĪVES ANALOĢIJA: PLĀNS PIRMS GATAVOŠANAS
@@ -61,14 +58,13 @@ Pirms gatavo vakariņas, vari pierakstīt:
        Pagatavo citu ēdienu.
 3. Pasniedz vakariņas.
 
-Šis plāns parāda darbību secību un izvēli atkarībā no apstākļiem.
-Pseidokods līdzīgi palīdz izplānot programmas darbību pirms īstā koda rakstīšanas.
+Šis plāns parāda darbību secību un izvēli atkarībā no apstākļiem. Pseidokods līdzīgi palīdz izplānot
+programmas darbību pirms īstā koda rakstīšanas.
 
 
 5. PRAKTISKS PIEMĒRS: PIRKUMA ATLAIDE
 ----------------------------------------------------------------------------------------------------
-Uzdevums: ja pirkuma summa ir vismaz 50 EUR, piemēro 10 % atlaidi.
-Pretējā gadījumā summa nemainās.
+Uzdevums: ja pirkuma summa ir vismaz 50 EUR, piemēro 10 % atlaidi. Pretējā gadījumā summa nemainās.
 
 PSEIDOKODS:
 
