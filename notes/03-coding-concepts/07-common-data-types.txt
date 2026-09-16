@@ -1,0 +1,89 @@
+====================================================================================================
+07. BIEŽĀK IZMANTOTIE DATU TIPI (COMMON DATA TYPES)
+====================================================================================================
+
+1. KAS IR DATU TIPS?
+----------------------------------------------------------------------------------------------------
+Datu tips (data type) nosaka, kāda veida vērtība ir datos un kādas darbības ar to var veikt: skaitļus var
+saskaitīt, tekstu — savienot.
+
+Analoģija: dati ir kā dažāds saturs kastītēs, bet tips — etiķete, kas palīdz saprast, kas kastītē atrodas un
+kā ar to rīkoties.
+
+
+2. PAMATA DATU TIPI PYTHON VALODĀ
+----------------------------------------------------------------------------------------------------
+* Vesels skaitlis (Integer / int):
+  Skaitlis bez daļskaitļa daļas, piemēram, 5, -12 vai 0.
+  precu_skaits = 5
+
+* Peldošā komata skaitlis (Floating-point number / float):
+  Skaitlis, piemēram, 3.14 vai -0.5. Python pierakstā izmanto punktu.
+  temperatura = 18.5
+  Ņem vērā: float vērtības var būt aptuvenas, tāpēc aprēķinos iespējamas nelielas noapaļošanas kļūdas.
+
+* Teksta virkne (String / str):
+  Simbolu secība — burti, cipari, atstarpes un citas zīmes. Tekstu raksta vienpēdiņās vai dubultpēdiņās.
+  vards = "Anna"
+
+* Loģiskā vērtība (Boolean / bool):
+  Viena no divām vērtībām: True (patiess) vai False (aplams). Izmanto nosacījumos un ciklos.
+  ir_pieslegusies = True
+
+Datumiem un laikam bieži izmanto īpašus tipus, nevis vienkārši skaitļus.
+
+
+3. PĒDIŅĀM UN PIERAKSTAM IR NOZĪME
+----------------------------------------------------------------------------------------------------
+5         → vesels skaitlis (int)
+"5"       → teksts (str)
+True      → loģiskā vērtība (bool)
+"True"    → teksts (str)
+
+Python loģiskās vērtības raksta ar lielo sākumburtu un bez pēdiņām. Mazajiem burtiem rakstītais true tiek
+uztverts kā mainīgā nosaukums; ja tas nav definēts, rodas NameError.
+
+Literālis (literal) ir kodā tieši ierakstīta vērtība, piemēram, 5 vai "Anna". Tas nav sinonīms teksta virknei
+— literāļi var attēlot dažādu tipu vērtības.
+
+
+4. PRAKTISKS PIEMĒRS
+----------------------------------------------------------------------------------------------------
+precu_skaits = 3
+cena = 2.5
+prece = "Ābols"
+ir_pieejama = True
+
+kopeja_summa = precu_skaits * cena
+
+print(prece)                   # Ābols
+print(kopeja_summa)             # 7.5
+print(kopeja_summa > 5)         # True
+
+Datu tips ietekmē darbības rezultātu:
+
+print(5 + 2)                   # 7 — skaitļu saskaitīšana
+print("5" + "2")               # 52 — teksta savienošana
+print(int("5") + 2)            # 7 — teksts vispirms pārvērsts skaitlī
+
+Izteiksme "5" + 2 rada TypeError: tekstu un skaitli šādi saskaitīt nevar.
+
+
+5. KĀ NOSKAIDROT DATU TIPU?
+----------------------------------------------------------------------------------------------------
+Iebūvētā funkcija type() atgriež vērtības tipu.
+Lai to parādītu programmas izvadē, izmanto print():
+
+print(type(5))                 # <class 'int'>
+print(type(3.14))              # <class 'float'>
+print(type("Sveika!"))         # <class 'str'>
+print(type(True))              # <class 'bool'>
+
+
+6. GALVENAIS, KO ATCERĒTIES
+----------------------------------------------------------------------------------------------------
+* int un float izmanto skaitļiem, str — tekstam, bool — loģiskām vērtībām.
+* "5" un 5 ir dažādu tipu vērtības.
+* Python decimāldaļu atdala ar punktu; True un False raksta bez pēdiņām.
+* type() palīdz pārbaudīt tipu, bet int() var pārvērst derīgu tekstu veselā skaitlī.
+====================================================================================================
