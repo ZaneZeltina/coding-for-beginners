@@ -1,0 +1,98 @@
+====================================================================================================
+08. ARITMĒTIKA UN OPERATORI (ARITHMETIC & OPERATORS)
+====================================================================================================
+
+1. KAS IR OPERATORS?
+----------------------------------------------------------------------------------------------------
+Operators (operator) ir simbols vai atslēgvārds, kas veic darbību ar vērtībām.
+Piemēram, izteiksmē 5 + 2 operators ir +, bet vērtības 5 un 2 sauc par operandiem (operands).
+
+Operatori ļauj veikt aprēķinus, salīdzināt vērtības un apvienot nosacījumus.
+
+
+2. ARITMĒTISKIE OPERATORI (ARITHMETIC OPERATORS)
+----------------------------------------------------------------------------------------------------
+Operators   Darbība                         Python piemērs       Rezultāts
++           Saskaitīšana                    5 + 2                7
+-           Atņemšana                       5 - 2                3
+*           Reizināšana                     5 * 2                10
+/           Dalīšana                        5 / 2                2.5
+//          Dalīšana ar noapaļošanu uz leju  5 // 2               2
+%           Dalījuma atlikums               5 % 2                1
+**          Kāpināšana                      5 ** 2               25
+
+* Python parastā dalīšana / dod float rezultātu: 6 / 2 → 3.0.
+* Operators // noapaļo uz leju, nevis vienkārši atmet daļskaitļa daļu: -5 // 2 → -3.
+* Dalīt ar nulli nedrīkst — Python rodas ZeroDivisionError.
+
+Darbību secība: vispirms iekavas, tad kāpināšana, tad reizināšana un dalīšana, tad saskaitīšana un atņemšana.
+
+print(2 + 3 * 4)       # 14
+print((2 + 3) * 4)     # 20
+
+
+3. VIENS OPERATORS — DAŽĀDAS DARBĪBAS
+----------------------------------------------------------------------------------------------------
+Operatora nozīme var būt atkarīga no datu tipa. Ar skaitļiem + saskaita, ar tekstu — savieno virknes.
+
+print(5 + 2)                    # 7
+print("Sveika, " + "Anna!")      # Sveika, Anna!
+
+Atstarpes teksta savienošanā nepievienojas automātiski — tās jāiekļauj pašā tekstā.
+
+
+4. PIEŠĶIRŠANA UN SALĪDZINĀŠANA (ASSIGNMENT & COMPARISON)
+----------------------------------------------------------------------------------------------------
+= piešķir vērtību mainīgajam, bet == pārbauda, vai vērtības ir vienādas.
+
+vecums = 18             # Piešķir vērtību.
+print(vecums == 18)     # True — pārbauda vienādību.
+
+Salīdzināšanas piemēros rezultāts ir True (patiess) vai False (aplams):
+
+Operators   Nozīme                  Piemērs          Rezultāts
+==          Vienāds                  5 == 5           True
+!=          Nav vienāds              5 != 5           False
+>           Lielāks                  7 > 5            True
+<           Mazāks                   7 < 5            False
+>=          Lielāks vai vienāds       40 >= 40         True
+<=          Mazāks vai vienāds        40 <= 39         False
+
+
+5. LOĢISKIE OPERATORI (LOGICAL OPERATORS)
+----------------------------------------------------------------------------------------------------
+Ar loģiskajiem operatoriem apvieno vai noliedz nosacījumus:
+
+* and (UN): True, ja abi nosacījumi ir patiesi.
+* or (VAI): True, ja vismaz viens nosacījums ir patiess.
+* not (NE): apgriež loģisko vērtību — True kļūst par False un otrādi.
+
+print((7 > 5) and (3 > 5))      # False
+print((7 > 5) or (3 > 5))       # True
+print(not (7 > 5))             # False
+
+Šie skaidrojumi attiecas uz loģiskām vērtībām. Python and un or ar citām vērtībām var atdot pašu operandu.
+
+Analoģija: lai ieietu pasākumā, vajadzīga biļete UN jāatbilst vecuma ierobežojumam.
+
+
+6. PRAKTISKS PIEMĒRS
+----------------------------------------------------------------------------------------------------
+vecums = 20
+ir_bilete = True
+
+if (vecums >= 18) and ir_bilete:
+    print("Ieeja atļauta.")
+else:
+    print("Ieeja liegta.")
+
+Rezultāts: Ieeja atļauta — abi nosacījumi ir patiesi.
+
+
+7. GALVENAIS, KO ATCERĒTIES
+----------------------------------------------------------------------------------------------------
+* Aritmētiskie operatori veic aprēķinus; iekavas palīdz norādīt darbību secību.
+* Nejauc = (piešķiršanu) ar == (vienādības pārbaudi).
+* Salīdzinājumus izmanto nosacījumos, bet and, or un not palīdz tos apvienot vai noliegt.
+* Operatoru pieraksts dažādās valodās var atšķirties; šeit piemēri ir Python valodā.
+====================================================================================================
