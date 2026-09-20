@@ -1,0 +1,98 @@
+====================================================================================================
+09. CIKLI (LOOPS)
+====================================================================================================
+
+1. KAS IR CIKLS?
+----------------------------------------------------------------------------------------------------
+Cikls (loop) atkārtoti izpilda koda bloku. Vienu izpildes reizi sauc par iterāciju (iteration).
+
+Tā vietā, lai kopētu vienu darbību desmit reižu, to uzraksta vienreiz un atkārto ciklā.
+Tas samazina koda dublēšanos, atvieglo lasīšanu un ļauj labojumus veikt vienā vietā.
+
+Analoģija: treneris saka "atkārto vingrinājumu 10 reizes", nevis desmitreiz atkārto vienu instrukciju.
+
+
+2. FOR CIKLS — KATRAM ELEMENTAM
+----------------------------------------------------------------------------------------------------
+Python for cikls iziet cauri elementiem, piemēram, sarakstā, tekstā vai range() veidotā skaitļu secībā.
+
+# Izvada katru vārdu no saraksta.
+for vards in ["Anna", "Jānis", "Ieva"]:
+    print(vards)
+
+Ja vajadzīgs noteikts atkārtojumu skaits, izmanto range():
+
+for reize in range(1, 11):
+    print(f"Atkārtojums Nr. {reize}")
+
+Šis cikls izpildās 10 reizes: reize iegūst vērtības no 1 līdz 10.
+range(1, 11) ietver sākuma vērtību 1, bet neietver beigu robežu 11.
+Savukārt range(10) dod vērtības no 0 līdz 9 — arī 10 atkārtojumus.
+
+
+3. WHILE CIKLS — KAMĒR NOSACĪJUMS IR PATIESS
+----------------------------------------------------------------------------------------------------
+while atkārto darbības, kamēr nosacījums ir True. Nosacījumu pārbauda pirms katras iterācijas.
+Ja tas jau sākumā ir False, cikla ķermenis netiek izpildīts nevienu reizi.
+
+reize = 1
+
+while reize <= 3:
+    print(f"Atkārtojums Nr. {reize}")
+    reize += 1
+
+Rezultāts:
+Atkārtojums Nr. 1
+Atkārtojums Nr. 2
+Atkārtojums Nr. 3
+
+reize += 1 palielina skaitītāju par vienu — tas ir inkrements (increment).
+Šajā piemērā tas ir līdzvērtīgs reize = reize + 1. Kad reize kļūst par 4, cikls beidzas.
+
+
+4. BEZGALĪGS CIKLS (INFINITE LOOP)
+----------------------------------------------------------------------------------------------------
+Ja while nosacījums nekad nekļūst aplams un cikls netiek citādi pārtraukts, tas turpina atkārtoties.
+
+Iepriekšējā piemērā, aizmirstot reize += 1, vērtība paliktu 1 un cikls nebeigtos pats.
+Šādu programmu var apturēt ar izstrādes vides Stop pogu vai terminālī parasti ar Ctrl + C.
+
+Bezgalīgs cikls ne vienmēr ir kļūda: to var izmantot apzināti, paredzot veidu, kā to pārtraukt.
+
+
+5. BREAK UN CONTINUE
+----------------------------------------------------------------------------------------------------
+* break — uzreiz pārtrauc pašreizējo ciklu.
+* continue — izlaiž atlikušo pašreizējās iterācijas kodu un pāriet pie nākamās iterācijas.
+
+for skaitlis in range(1, 6):
+    if skaitlis == 2:
+        continue
+    if skaitlis == 4:
+        break
+    print(skaitlis)
+
+Rezultāts: izvada 1 un 3, katru savā rindā.
+Skaitli 2 izlaiž, bet pie 4 cikls beidzas.
+
+
+6. IEKŠĒJIE CIKLI (NESTED LOOPS)
+----------------------------------------------------------------------------------------------------
+Vienu ciklu var ievietot citā. Katrā ārējā cikla iterācijā iekšējais cikls sākas no jauna.
+
+for piegajiens in range(1, 3):
+    for reize in range(1, 4):
+        print(f"Piegājiens {piegajiens}, atkārtojums {reize}")
+
+Šeit ir 2 piegājieni ar 3 atkārtojumiem katrā — kopā 6 izdrukas.
+Šādi cikli noder, piemēram, tabulas rindu un kolonnu apstrādei, bet var palielināt darbību skaitu.
+
+
+7. GALVENAIS, KO ATCERĒTIES
+----------------------------------------------------------------------------------------------------
+* for izmanto elementu pārskatīšanai vai noteiktam atkārtojumu skaitam; while — atkārtošanai pēc nosacījuma.
+* Python cikla galvene beidzas ar kolu (:), bet cikla ķermeni norāda ar atkāpēm, parasti 4 atstarpēm.
+* Pārbaudi range() robežas un to, vai while cikls var beigties.
+* break pārtrauc ciklu, bet continue izlaiž vienas iterācijas atlikumu.
+* Cikli mazina koda dublēšanos, taču paši par sevi negarantē ātrāku programmu.
+====================================================================================================
