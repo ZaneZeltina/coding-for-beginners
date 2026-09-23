@@ -1,0 +1,101 @@
+====================================================================================================
+10. PROGRAMMAS IZPILDES PLŪSMA (CONTROL FLOW)
+====================================================================================================
+
+1. KAS IR IZPILDES PLŪSMA?
+----------------------------------------------------------------------------------------------------
+Izpildes plūsma (control flow) ir secība, kādā programma izpilda darbības.
+Parasti tās notiek no augšas uz leju, bet nosacījumi ļauj izvēlēties darbības, savukārt cikli — tās atkārtot.
+
+Nosacījuma konstrukcija (conditional statement) pārbauda nosacījumu un nosaka, kuru koda bloku izpildīt.
+
+Analoģija: ja ārā līst, paņem lietussargu; citādi dodies ārā bez tā.
+
+
+2. IF UN ELSE — DIVAS IZVĒLES
+----------------------------------------------------------------------------------------------------
+* if (JA): izpilda savu koda bloku, ja nosacījums ir patiess.
+* else (CITĀDI): izpilda savu bloku, ja if nosacījums ir aplams.
+
+list_lietus = True
+
+if list_lietus:
+    print("Paņem lietussargu.")
+else:
+    print("Lietussargs nav vajadzīgs.")
+
+else nav obligāts. Ja tā nav un if nosacījums ir aplams, programma izlaiž if bloku un turpina darbu.
+
+
+3. ELIF — VAIRĀKI IESPĒJAMIE VARIANTI
+----------------------------------------------------------------------------------------------------
+elif nozīmē "citādi, ja" (else if). Tas ļauj pārbaudīt papildu nosacījumus, ja iepriekšējie nav izpildījušies.
+
+Vienā if / elif / else ķēdē:
+* Nosacījumus pārbauda secīgi no augšas uz leju.
+* Izpilda tikai pirmā patiesā nosacījuma bloku; pārējos šīs ķēdes zarus izlaiž.
+* else izpilda, ja neviens nosacījums nav patiess.
+* Ja nav else un visi nosacījumi ir aplami, neizpilda nevienu ķēdes bloku.
+
+Svarīgi: vairāki atsevišķi if tiek pārbaudīti neatkarīgi, tāpēc var izpildīties vairāki bloki.
+
+
+4. PRAKTISKS PIEMĒRS: VĒRTĒJUMA NOTEIKŠANA
+----------------------------------------------------------------------------------------------------
+Pieņemsim, ka lietotājs ievada veselu punktu skaitu no 0 līdz 100.
+Šajā mācību piemērā A piešķir no 90 punktiem, B — no 80, C — no 70, bet zem 70 jāpapildina zināšanas.
+
+punkti = int(input("Ievadi punktu skaitu no 0 līdz 100: "))
+
+if punkti < 0 or punkti > 100:
+    print("Punktu skaitam jābūt no 0 līdz 100.")
+elif punkti >= 90:
+    print("Vērtējums: A")
+elif punkti >= 80:
+    print("Vērtējums: B")
+elif punkti >= 70:
+    print("Vērtējums: C")
+else:
+    print("Jāpapildina zināšanas.")
+
+Piemēri:
+* 95 → A.
+* 85 → B.
+* 70 → C.
+* 60 → jāpapildina zināšanas.
+* 105 → paziņojums par neatļautu punktu skaitu.
+
+Secība ir svarīga: ja vispirms pārbaudītu >= 70, arī 95 punkti nonāktu šajā zarā.
+Tāpēc pēc diapazona pārbaudes sākam ar augstāko vērtējuma slieksni.
+
+
+5. INPUT() UN DATU TIPI
+----------------------------------------------------------------------------------------------------
+input() atgriež tekstu (str), pat ja lietotājs ievada ciparus.
+int() pārvērš derīgu vesela skaitļa tekstu par skaitli (int), lai to varētu salīdzināt ar citiem skaitļiem.
+
+"95" >= 90              # TypeError: šādi tekstu ar skaitli salīdzināt nevar.
+int("95") >= 90         # True
+
+Ja ievada "abc" vai "95.5", int() rada ValueError. Iepriekšējais piemērs šādu ievadi vēl neapstrādā;
+tam vēlāk var pievienot kļūdu apstrādi ar try / except.
+
+
+6. KĀ VEIDOT UN PĀRBAUDĪT NOSACĪJUMUS?
+----------------------------------------------------------------------------------------------------
+Vispirms uzraksti vienkāršu risinājumu, pārbaudi to un pēc tam uzlabo — tā ir ātrā prototipēšana
+(rapid prototyping). Pirms rakstīšanas īsi uzskaiti vajadzīgos variantus, lai kādu neaizmirstu.
+
+* Pārbaudi katru zaru un robežvērtības, piemēram, 69, 70, 89 un 90.
+* Python pēc if, elif un else raksta kolu (:).
+* Bloka darbības norāda ar vienādām atkāpēm, parasti 4 atstarpēm.
+* Vienādību pārbauda ar ==, bet vērtību piešķir ar =.
+
+
+7. GALVENAIS, KO ATCERĒTIES
+----------------------------------------------------------------------------------------------------
+* if sāk nosacījumu ķēdi, elif pievieno citus nosacījumus, else aptver atlikušos gadījumus.
+* Vienā ķēdē izpilda ne vairāk kā vienu zaru; nosacījumu secībai ir nozīme.
+* input() atgriež tekstu — pirms skaitliskiem salīdzinājumiem to pārveido atbilstošā skaitļa tipā.
+* Pārbaudi robežvērtības, ievades datus un koda atkāpes.
+====================================================================================================
