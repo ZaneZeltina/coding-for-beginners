@@ -1,0 +1,94 @@
+====================================================================================================
+11. DATU GLABĀŠANA UN MAINĪGIE (STORING DATA & VARIABLES)
+====================================================================================================
+
+1. KĀ PROGRAMMA GLABĀ DATUS?
+----------------------------------------------------------------------------------------------------
+Programmai dati var būt vajadzīgi gan darbības laikā, gan nākamajā palaišanas reizē.
+
+* Darbības laikā: vērtības glabā atmiņā un izmanto ar mainīgo palīdzību.
+* Starp palaišanas reizēm: vajadzīgos datus saglabā, piemēram, failā vai datubāzē (database).
+
+Piemēram, spēles laikā programma uzskaita punktus, bet pirms aizvēršanas saglabā spēles progresu.
+Mainīgā izveidošana pati par sevi nenodrošina datu saglabāšanu pēc programmas aizvēršanas.
+
+
+2. KAS IR MAINĪGAIS? (VARIABLE)
+----------------------------------------------------------------------------------------------------
+Mainīgais ir nosaukums, ar kuru programmā piekļūst vērtībai. Python mainīgo izveido, piešķirot tam vērtību ar =.
+
+speletaja_vards = "Anna"
+dzivibas = 3
+punkti = 0
+spele_aktiva = True
+
+Šeit izmantots teksts (str), veseli skaitļi (int) un loģiskā vērtība (bool).
+
+Analoģija: mainīgais ir kā nosaukta kastīte, kuras saturu vari izmantot un nomainīt.
+Precīzāk, Python mainīgā nosaukums atsaucas uz objektu atmiņā.
+
+
+3. VĒRTĪBAS IZMANTOŠANA UN MAINĪŠANA
+----------------------------------------------------------------------------------------------------
+Lai izmantotu vērtību, raksta mainīgā nosaukumu bez pēdiņām.
+Jaunu vērtību piešķir ar =; aprēķinā var izmantot arī iepriekšējo vērtību.
+
+dzivibas = 3
+dzivibas = dzivibas - 1
+
+print(dzivibas)          # 2
+print("dzivibas")        # dzivibas — teksts, nevis mainīgā vērtība.
+
+Pierakstu dzivibas = dzivibas - 1 var saīsināt līdz dzivibas -= 1.
+Līdzīgi punkti += 10 palielina punktu skaitu par 10.
+
+Vispirms aprēķina izteiksmi pa labi no = un tad rezultātu piešķir mainīgajam.
+Vērtība mainās tikai tad, kad programma izpilda attiecīgo darbību.
+
+
+4. MAINĪGO NOSAUKUMI
+----------------------------------------------------------------------------------------------------
+Izvēlies nosaukumu, kas paskaidro datu nozīmi: speletaja_vards ir saprotamāks nekā x.
+
+Python nosaukumu pamatnoteikumi:
+* Var izmantot burtus, ciparus un pasvītrojumu (_), bet nosaukumu nedrīkst sākt ar ciparu.
+* Atstarpes nav atļautas; vairākiem vārdiem parasti izmanto snake_case, piemēram, speletaja_punkti.
+* Lielajiem un mazajiem burtiem ir nozīme: punkti un Punkti ir dažādi nosaukumi.
+* Nedrīkst izmantot rezervētos atslēgvārdus, piemēram, if, for vai while.
+
+Mainīgajam jāpiešķir vērtība pirms tā izmantošanas. Nedefinēts nosaukums izraisa NameError.
+
+
+5. PRAKTISKS PIEMĒRS: SPĒLĒTĀJA DATI
+----------------------------------------------------------------------------------------------------
+speletaja_vards = "Anna"
+dzivibas = 3
+punkti = 0
+
+# Spēlētāja iegūst punktus un zaudē vienu dzīvību.
+punkti += 10
+dzivibas -= 1
+
+print(f"{speletaja_vards}: {punkti} punkti, {dzivibas} dzīvības.")
+
+if dzivibas <= 0:
+    print("Spēle beigusies.")
+else:
+    print("Spēle turpinās.")
+
+Rezultāts:
+Anna: 10 punkti, 2 dzīvības.
+Spēle turpinās.
+
+Palaižot šo programmu no jauna, sākuma piešķiršanas atkal iestatīs 3 dzīvības un 0 punktus.
+Lai turpinātu iepriekšējo spēli, būtu jāsaglabā dati un nākamajā palaišanā tie jāielasa.
+
+
+6. GALVENAIS, KO ATCERĒTIES
+----------------------------------------------------------------------------------------------------
+* Mainīgais ļauj pēc nosaukuma piekļūt vērtībai un vajadzības gadījumā to mainīt.
+* = piešķir vērtību; == pārbauda vienādību.
+* Python vērtības tips nosaka, kādas darbības ar to var veikt; tips nav iepriekš jānorāda.
+* Skaidri mainīgo nosaukumi padara kodu vieglāk saprotamu.
+* Datu saglabāšana failā vai datubāzē ir atsevišķa darbība, kas ļauj tos izmantot arī vēlāk.
+====================================================================================================
